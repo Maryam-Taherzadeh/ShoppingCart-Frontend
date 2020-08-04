@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+
+
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{# each orders }}
+                    <tr>
+                        <th scope="row">{{@index}}</th>
+                        <td>{{this.name}}</td>
+                        <td>{{this.cart.totalPrice}}$</td>
+                        <td>{{this.date}}</td>
+                    </tr>
+                    {{/each}}
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

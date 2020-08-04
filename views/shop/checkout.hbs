@@ -1,0 +1,73 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Please fill the blank fields</div>
+    <div class="panel-body">
+        <h2 style="margin-bottom: 16px;">
+            total: {{ total }} $
+        </h2>
+        <div class="input-group">
+            <form action="/checkout" method="post">
+                <input maxlength="20" id="name" style="margin-bottom: 10px;" name="name" placeholder="name" type="text"
+                    class="form-control">
+                <input maxlength="25" id="username" style="margin-bottom: 10px;" name="lastname" placeholder="lastname"
+                    type="text" class="form-control">
+                <input id="phone" style="margin-bottom: 10px;" name="phone" placeholder="phone" type="text"
+                    class="form-control">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="AX" value="option1">
+                    <label class="form-check-label" for="AX">
+                        AX
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="V" value="option2">
+                    <label class="form-check-label" for="V">
+                        V
+                    </label>
+                </div>
+                <input id="cc" style="margin-bottom: 10px;" name="ciriditcard" placeholder="Ciridit card" type="text"
+                    class="form-control">
+                <button id="button" class="btn btn-primary" type="submit">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script>
+    $('#name').on('input', function () {
+        var username_length = $('#name').val().length;
+        if (username_length > 20) {
+            $('#button').addClass('disabled');
+            console.log(username_length);
+        } else {
+            $('#button').removeClass('disabled');
+        }
+    });
+
+    $('#username').on('input', function () {
+        var username_length = $('#username').val().length;
+        if (username_length > 25) {
+            $('#button').addClass('disabled');
+            console.log(username_length);
+        } else {
+            $('#button').removeClass('disabled');
+        }
+    });
+
+    $('#phone').on('input', function () {
+        var username_length = $('#phone').val().length;
+        if (username_length > 17) {
+
+            $('#button').addClass('disabled');
+            console.log(username_length);
+        } else {
+            $('#button').removeClass('disabled');
+        }
+    });
+
+
+
+
+
+
+
+</script>
