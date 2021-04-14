@@ -6,7 +6,7 @@ In order to create shopping cart we need a simple storage system where we can co
 
 Node.js provide us with the express-session package, a middleware for expressJS.
 
-## REquirement
+## Requirement
 
 Media query,jQuery,Bootstrap, HTML, Mongo database
 
